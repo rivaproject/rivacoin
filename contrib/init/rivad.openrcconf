@@ -1,0 +1,26 @@
+# /etc/conf.d/rivad: config file for /etc/init.d/rivad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/riva/riva.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/rivad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/rivad.pid"
+
+# Where to write rivad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/rivad"
+
+# User and group to own rivad process
+#BITCOIND_USER="riva"
+#BITCOIND_GROUP="riva"
+
+# Path to rivad executable
+#BITCOIND_BIN="/usr/bin/rivad"
+
+# Nice value to run rivad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

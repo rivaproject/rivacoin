@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Riva
+Comment=Riva P2P Cryptocurrency
+Exec=riva-qt %u
+Terminal=false
+Type=Application
+Icon=riva128
+MimeType=x-scheme-handler/riva;
+Categories=Office;Finance;
+Name[en_US]=riva-qt.desktop

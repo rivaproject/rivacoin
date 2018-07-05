@@ -1,0 +1,26 @@
+[Unit]
+Description=Riva's distributed currency daemon
+After=network.target
+
+[Service]
+User=riva
+Group=riva
+
+Type=forking
+PIDFile=/var/lib/rivad/rivad.pid
+
+ExecStart=/usr/bin/rivad -daemon -pid=/var/lib/rivad/rivad.pid \
+          -conf=/etc/riva/riva.conf -datadir=/var/lib/rivad
+
+ExecStop=-/usr/bin/riva-cli -conf=/etc/riva/riva.conf \
+         -datadir=/var/lib/rivad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
